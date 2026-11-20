@@ -6,15 +6,17 @@ use Pbo\Marketplace\Produk;
 
 
 //object
-$produk = new Produk(p0001,Laptop,100000,5);
+$produk = new Produk();
+
+$produk->setkode('P00001')->setnama('Laptop')->setharga('10000000')->setstok(5);
 
 
 //hasil
-echo "produk: ". $produk->nama;
+echo "produk: ". $produk->getnama();
 echo "<br>";
-echo "harga: ". $produk->harga;
+echo "harga: ". $produk->getharga();
 echo "<br>";
-echo "stok: ". $produk->stok;
+echo "stok: ". $produk->getstok();
 echo "<br>";
 echo "pajak: ". $produk->pajak(). "%";
 echo "<br>";
